@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/udacity-would-you-rather-jcb.iml" filepath="$PROJECT_DIR$/.idea/udacity-would-you-rather-jcb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/would-you-rather.iml" filepath="$PROJECT_DIR$/.idea/would-you-rather.iml" />
     </modules>
   </component>
 </project>

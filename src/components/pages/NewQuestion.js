@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from "react-redux";
-import { handleAddQuestion } from "../../actions/shared";
+import { handleAddQuestion } from "../../actions/questions";
 import { Redirect } from 'react-router-dom'
 
 class NewQuestion extends Component {
@@ -55,11 +55,15 @@ class NewQuestion extends Component {
 
         return (
           <div>
-             <h1>NewQuestion</h1>
+             <h1>New Question</h1>
               <form onSubmit={this.handleSubmit}>
                   <input type="text" name="optionOneText" value={optionOneText} placeholder="Question One" onChange={this.handleChange} />
+                  <br/>
+                  or
+                  <br/>
                   <input type="text" name='optionTwoText' value={optionTwoText} placeholder="Question Two" onChange={this.handleChange} />
-
+                  <br/>
+                  <br/>
                   <button className='btn'
                           type='submit'
                           disabled={!this.isDisabled()}>

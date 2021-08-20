@@ -9,7 +9,7 @@ class Leaderboard extends Component {
         return (
           <div>
              <h1>Leaderboard</h1>
-              <ul>
+              <ol>
                   {users.map((user) => (
                       <li key={user.id}>
                           {user.name}
@@ -21,7 +21,7 @@ class Leaderboard extends Component {
                           total: {user.questions.length + Object.keys(user.answers).length}
                       </li>
                   ))}
-              </ul>
+              </ol>
           </div>
         )
     }

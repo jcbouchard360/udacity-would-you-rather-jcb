@@ -14,7 +14,7 @@ import Leaderboard from "./pages/Leaderboard";
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {optionValue: this.props.authedUser};
+        this.state = {optionValue: this.props.authedUser || ''};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,6 +26,8 @@ class App extends Component {
         const { optionValue } = this.state
 
         optionValue !== '' && dispatch(setAuthedUser(optionValue))
+        this.setState({optionValue: ''});
+
     }
 
     handleChange(event) {
@@ -52,8 +54,8 @@ class App extends Component {
                                 ?
                                 <Switch>
                                     <Route path='/' exact component={Home} />
-                                    <Route path='/question/:id' component={Question} />
-                                    <Route path='/new' component={NewQuestion} />
+                                    <Route path='/questions/:id' component={Question} />
+                                    <Route path='/add' component={NewQuestion} />
                                     <Route path='/leaderboard' component={Leaderboard} />
                                     <Route path='*' component={Page404} />
                                 </Switch>

@@ -21,7 +21,7 @@ class Nav extends Component {
           <nav>
               <ul>
                   <li><Link className="close-search" to="/">Home</Link></li>
-                  <li><Link className="close-search" to="/new">New Question</Link></li>
+                  <li><Link className="close-search" to="/add">New Question</Link></li>
                   <li><Link className="close-search" to="/leaderboard">Leaderboard</Link></li>
               </ul>
 
@@ -29,7 +29,7 @@ class Nav extends Component {
                  <ul>
                      <li>
                          <img src={authedUser.avatarURL} alt={authedUser.name}/>
-                         {authedUser.name}
+                         {authedUser.name} is logged in, for now .... yeah
                      </li>
                      <li>
                          <Link to='/' onClick={this.clearAuthedUser}>Log Out</Link>

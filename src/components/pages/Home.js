@@ -4,9 +4,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import QuestionPreviewCard from "../cards/QuestionPreviewCard";
 
 class Home extends Component {
-
     render() {
-        const { answeredQuestions , authedUser , users , unansweredQuestions} = this.props
+        const { answeredQuestions , unansweredQuestions} = this.props
         return (
             <div>
                 <h1>home</h1>
@@ -14,12 +13,12 @@ class Home extends Component {
 
                     <Tabs>
                         <TabList>
-                            <Tab>New Questions</Tab>
-                            <Tab>Answered Questions</Tab>
+                            <Tab>Show New Questions</Tab>
+                            <Tab>Show Answered Questions</Tab>
                         </TabList>
 
                         <TabPanel>
-                            <h2>New</h2>
+                            <h2>New Questions</h2>
                             <ul>
                                 {unansweredQuestions.map((question) => (
                                     <li key={question.id}>
@@ -29,7 +28,7 @@ class Home extends Component {
                             </ul>
                         </TabPanel>
                         <TabPanel>
-                            <h2>Answered</h2>
+                            <h2>Answered Questions</h2>
                             <ul>
                                 {answeredQuestions.map((question) => (
                                   <li key={question.id}>
@@ -49,7 +48,6 @@ class Home extends Component {
 function mapStateToProps({authedUser , questions , users }) {
     const questionsArray = Object.values(questions)
     const answeredQuestions = questionsArray.filter((q) => q.optionOne.votes.includes(authedUser) || q.optionTwo.votes.includes(authedUser) )
-
     const unansweredQuestions = questionsArray.filter((q) => !q.optionOne.votes.includes(authedUser)  && !q.optionTwo.votes.includes(authedUser)).sort((a, b) => b.timestamp - a.timestamp);
 
     return {
