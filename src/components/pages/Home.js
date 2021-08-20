@@ -13,12 +13,12 @@ class Home extends Component {
 
                     <Tabs>
                         <TabList>
-                            <Tab>Show New Questions</Tab>
+                            <Tab>Show Unanswered Questions</Tab>
                             <Tab>Show Answered Questions</Tab>
                         </TabList>
 
                         <TabPanel>
-                            <h2>New Questions</h2>
+                            <h2>Unanswered Questions</h2>
                             <ul>
                                 {unansweredQuestions.map((question) => (
                                     <li key={question.id}>

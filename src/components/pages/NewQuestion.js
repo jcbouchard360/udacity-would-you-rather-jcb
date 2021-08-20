@@ -55,7 +55,7 @@ class NewQuestion extends Component {
 
         return (
           <div>
-             <h1>New Question</h1>
+             <h1>Would You Rather</h1>
               <form onSubmit={this.handleSubmit}>
                   <input type="text" name="optionOneText" value={optionOneText} placeholder="Question One" onChange={this.handleChange} />
                   <br/>

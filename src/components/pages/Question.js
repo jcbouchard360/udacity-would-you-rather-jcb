@@ -87,7 +87,9 @@ class Question extends Component {
                                            onChange={this.handleOptionChange}
                                            value="optionOne"/>
                                     <label htmlFor="optionOne">{question.optionOne.text}</label>
-
+                                    <br/>
+                                    or
+                                    <br/>
                                     <input type="radio"
                                            id="optionTwo"
                                            name="options"
@@ -95,7 +97,8 @@ class Question extends Component {
                                            onChange={this.handleOptionChange}
                                            value="optionTwo"/>
                                     <label htmlFor="optionTwo">{question.optionTwo.text}</label>
-
+                                    <br/>
+                                    <br/>
                                     <button className='btn'
                                             type='submit'
                                             disabled={this.isDisabled()}>
